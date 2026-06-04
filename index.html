@@ -2,73 +2,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All-Pro Renovations | Remodeling & Repairs</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All-Pro Renovations | Remodeling, Repairs & Maintenance</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#222; background:#f4f4f4; }
+    :root {
+      --cream: #f7f0df;
+      --black: #0f0f0f;
+      --gold: #c8a24a;
+      --blue: #00aeef;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
     header {
-      background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url("bruja living room.webp");
-      background-size: cover; background-position: center;
-      color:white; text-align:center; padding:90px 20px;
+      min-height: 720px;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+        url("Adding-Drama-to-Contemporary-Homes.webp");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
     }
-    header img { max-width:170px; background:white; padding:10px; border-radius:10px; }
-    header h1 { font-size:48px; margin:25px 0 10px; }
-    header p { font-size:22px; max-width:750px; margin:10px auto; }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    header img {
+      max-width: 190px;
+      background: rgba(255,255,255,.92);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
+      font-size: 56px;
+      margin: 10px 0;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      font-size: 26px;
+      color: var(--gold);
+      margin: 10px 0 20px;
+      border: none;
+      padding: 0;
+    }
+
+    header p {
+      font-size: 21px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
     .btn {
-      display:inline-block; margin-top:25px; background:#c79a2b; color:#111;
-      padding:14px 28px; border-radius:6px; text-decoration:none; font-weight:bold;
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
     }
-    section { max-width:1100px; margin:30px auto; padding:45px 25px; background:white; border-radius:12px; }
-    h2 { font-size:32px; margin-top:0; border-bottom:4px solid #c79a2b; padding-bottom:10px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
-    .card { background:#f5f5f5; padding:24px; border-radius:10px; font-weight:bold; }
-    .gallery img { width:100%; height:230px; object-fit:cover; border-radius:10px; }
-    .contact { text-align:center; font-size:20px; }
-    .contact a { color:#111; font-weight:bold; }
-    footer { background:#111; color:white; text-align:center; padding:25px; }
+
+    .btn.gold {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    section {
+      max-width: 1150px;
+      margin: 35px auto;
+      padding: 50px 28px;
+      background: rgba(255,255,255,.78);
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 0;
+      border-bottom: 4px solid var(--gold);
+      padding-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 19px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--black);
+      color: var(--white);
+      padding: 26px;
+      border-radius: 12px;
+      border-top: 5px solid var(--gold);
+      font-weight: bold;
+      min-height: 100px;
+    }
+
+    .card span {
+      color: var(--blue);
+      display: block;
+      font-size: 15px;
+      margin-top: 8px;
+      font-weight: normal;
+    }
+
+    .highlight {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .highlight h2 {
+      border-bottom: 4px solid var(--blue);
+      color: var(--gold);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--cream);
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .contact a {
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 25px;
+      border-top: 5px solid var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        min-height: 600px;
+      }
+
+      header h1 {
+        font-size: 40px;
+      }
+
+      header h2 {
+        font-size: 22px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="AP RENOVATION LOGO.png" alt="All-Pro Renovations Logo">
-  <h1>All-Pro Renovations</h1>
-  <p>Professional Residential & Commercial Remodeling, Repairs, Renovations, and Maintenance Services</p>
-  <a class="btn" href="tel:7133800745">Call 713-380-0745</a>
+  <div class="hero-content">
+    <img src="AP RENOVATION LOGO.png" alt="All-Pro Renovations Logo">
+    <h1>All-Pro Renovations</h1>
+    <h2>Quality Craftsmanship. Reliable Service. Professional Results.</h2>
+    <p>
+      Residential and commercial remodeling, repairs, renovations, and maintenance
+      services backed by over 15 years of hands-on experience.
+    </p>
+    <a class="btn" href="tel:7133800745">Call 713-380-0745</a>
+    <a class="btn gold" href="mailto:All.Pro.RenovationsHTX@gmail.com">Request an Estimate</a>
+  </div>
 </header>
 
 <section>
-  <h2>About Us</h2>
-  <p>
-    All-Pro Renovations provides high-quality residential and commercial remodeling,
-    repairs, renovations, and maintenance services. With over 15 years of experience,
-    we are committed to dependable workmanship, professional service, and lasting
-    relationships with our clients.
+  <h2>About All-Pro Renovations</h2>
+  <p class="intro">
+    All-Pro Renovations provides dependable residential and commercial remodeling,
+    repair, renovation, and maintenance services. We take pride in delivering clean,
+    professional work with attention to detail, honest communication, and a strong focus
+    on building long-term relationships with our clients.
   </p>
 </section>
 
 <section>
   <h2>Our Services</h2>
   <div class="grid">
-    <div class="card">Residential Remodeling</div>
-    <div class="card">Commercial Repairs</div>
-    <div class="card">Kitchen & Bathroom Renovations</div>
-    <div class="card">Painting & Drywall</div>
-    <div class="card">Flooring Installation</div>
-    <div class="card">Maintenance & Make-Ready Services</div>
+    <div class="card">Residential Remodeling <span>Interior upgrades, renovations, and improvements</span></div>
+    <div class="card">Commercial Repairs <span>Reliable service for offices, warehouses, and facilities</span></div>
+    <div class="card">Kitchen Renovations <span>Cabinets, countertops, flooring, painting, and finishes</span></div>
+    <div class="card">Bathroom Renovations <span>Showers, vanities, tile, fixtures, and complete updates</span></div>
+    <div class="card">Painting & Drywall <span>Interior paint, drywall repairs, texture, and finish work</span></div>
+    <div class="card">Flooring Installation <span>Luxury vinyl, laminate, tile, baseboards, and trim</span></div>
   </div>
+</section>
+
+<section class="highlight">
+  <h2>Why Choose Us?</h2>
+  <p class="intro">
+    We combine quality workmanship with fair pricing and professional service.
+    Whether it is a home remodel, commercial repair, make-ready project, or ongoing
+    maintenance need, All-Pro Renovations is committed to getting the job done right.
+  </p>
 </section>
 
 <section>
   <h2>Project Gallery</h2>
   <div class="grid gallery">
+    <img src="Adding-Drama-to-Contemporary-Homes.webp" alt="Interior Remodel">
     <img src="bruja kitchen 2.webp" alt="Kitchen Remodel">
     <img src="bruja living room.webp" alt="Living Room Remodel">
     <img src="bruja restroom.webp" alt="Bathroom Remodel">
     <img src="bruja shower.webp" alt="Shower Remodel">
     <img src="bruja staircase.webp" alt="Staircase Remodel">
-    <img src="Adding-Drama-to-Contemporary-Homes.webp" alt="Interior Remodel">
   </div>
 </section>
 
@@ -76,7 +253,7 @@
   <h2>Contact All-Pro Renovations</h2>
   <p><strong>Phone:</strong> <a href="tel:7133800745">713-380-0745</a></p>
   <p><strong>Email:</strong> <a href="mailto:All.Pro.RenovationsHTX@gmail.com">All.Pro.RenovationsHTX@gmail.com</a></p>
-  <p>Serving Houston, DFW, and surrounding areas</p>
+  <p><strong>Serving:</strong> Houston, DFW, and surrounding Texas areas</p>
 </section>
 
 <footer>
@@ -86,3 +263,5 @@
 </body>
 </html>
 ```
+
+
