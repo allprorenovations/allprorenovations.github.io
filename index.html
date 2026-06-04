@@ -1,12 +1,15 @@
 ```html
+<!-- Full updated All-Pro Renovations homepage code with Design-Build section -->
+<!-- Use this to replace everything inside index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>All-Pro Renovations | Houston & DFW Remodeling, Renovation & Commercial Repairs</title>
-  <meta name="description" content="All-Pro Renovations provides residential and commercial remodeling, renovations, repairs, painting, flooring, drywall, maintenance, and make-ready services in The Woodlands, Houston, Frisco, Plano, and surrounding Texas areas.">
+  <title>All-Pro Renovations | Design-Build Remodeling in Houston & DFW</title>
+  <meta name="description" content="All-Pro Renovations provides design-build remodeling, renovations, commercial repairs, painting, flooring, drywall, maintenance, and make-ready services in The Woodlands, Houston, Frisco, Plano, and surrounding Texas areas.">
 
   <style>
     :root {
@@ -87,7 +90,6 @@
       background: transparent;
       padding: 0;
       border: none;
-      border-radius: 0;
       margin-bottom: 30px;
       box-shadow: none;
     }
@@ -108,7 +110,7 @@
 
     header p {
       font-size: 21px;
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto 30px;
     }
 
@@ -200,8 +202,29 @@
       margin-bottom: 0;
     }
 
-    .process {
-      counter-reset: step;
+    .design-section {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .design-section h2 {
+      color: var(--gold);
+      border-bottom: 4px solid var(--blue);
+    }
+
+    .design-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .design-gallery img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--gold);
     }
 
     .process-card {
@@ -290,7 +313,7 @@
     .cta {
       background:
         linear-gradient(rgba(0,0,0,.84), rgba(0,0,0,.84)),
-        url("bruja living room.webp");
+        url("Kitchen-4.JPEG");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -362,6 +385,10 @@
       header h2 { font-size: 22px; }
 
       header p { font-size: 18px; }
+
+      .design-gallery img {
+        height: 230px;
+      }
     }
   </style>
 </head>
@@ -373,8 +400,8 @@
     <div class="nav-logo">All-Pro Renovations</div>
     <div>
       <a href="#services">Services</a>
+      <a href="#design">Design-Build</a>
       <a href="#process">Process</a>
-      <a href="#why">Why Choose Us</a>
       <a href="#gallery">Gallery</a>
       <a href="#areas">Service Areas</a>
       <a href="#contact">Contact</a>
@@ -386,10 +413,10 @@
   <div class="hero-content">
     <img src="AP RENOVATION LOGO.png" alt="All-Pro Renovations Logo">
     <h1>All-Pro Renovations</h1>
-    <h2>Transforming Homes & Businesses Through Quality Craftsmanship</h2>
+    <h2>Design • Build • Renovate</h2>
     <p>
-      Residential and commercial remodeling, renovations, repairs, painting, flooring,
-      drywall, maintenance, and make-ready services throughout Houston and DFW.
+      Residential and commercial remodeling, renovations, repairs, design planning,
+      painting, flooring, drywall, maintenance, and make-ready services throughout Houston and DFW.
     </p>
     <a class="btn" href="tel:7133800745">Call 713-380-0745</a>
     <a class="btn gold" href="mailto:All.Pro.RenovationsHTX@gmail.com">Request an Estimate</a>
@@ -400,10 +427,36 @@
   <h2>About All-Pro Renovations</h2>
   <p class="intro">
     All-Pro Renovations provides dependable residential and commercial remodeling,
-    repair, renovation, and maintenance services. With over 15 years of experience,
-    we focus on clean workmanship, honest communication, fair pricing, and professional
-    results that help build long-term relationships with our clients.
+    repair, renovation, design planning, and maintenance services. With over 15 years
+    of experience, we focus on clean workmanship, honest communication, fair pricing,
+    and professional results that help build long-term relationships with our clients.
   </p>
+</section>
+
+<section id="design" class="design-section">
+  <h2>In-House Design & Build Services</h2>
+  <p class="intro">
+    A successful renovation starts with a clear plan. All-Pro Renovations offers
+    in-house architectural design support to help clients visualize their project
+    before construction begins. From kitchen remodels and custom interiors to outdoor
+    living spaces and full renovation concepts, we help turn ideas into buildable plans.
+  </p>
+
+  <div class="checklist">
+    <div class="check">✓ In-House Architectural Design</div>
+    <div class="check">✓ Space Planning & Layout Concepts</div>
+    <div class="check">✓ Kitchen & Bathroom Design</div>
+    <div class="check">✓ Outdoor Living Design</div>
+    <div class="check">✓ Remodel Planning & Visualization</div>
+    <div class="check">✓ Design-Build Project Delivery</div>
+  </div>
+
+  <div class="design-gallery">
+    <img src="Kitchen-1.JPG" alt="In-house kitchen design rendering">
+    <img src="Kitchen-4.JPEG" alt="Kitchen design concept rendering">
+    <img src="Patio-5TR.JPG" alt="Outdoor living patio design rendering">
+    <img src="Patio-4TR.JPG" alt="Patio design build rendering">
+  </div>
 </section>
 
 <section>
@@ -442,24 +495,41 @@
 <section id="services">
   <h2>Featured Services</h2>
   <div class="grid">
+    <div class="card"><strong>Design & Planning</strong><span>In-house architectural design, space planning, remodel concepts, and visual project planning.</span></div>
     <div class="card"><strong>Kitchen Remodeling</strong><span>Cabinets, countertops, flooring, paint, fixtures, and full upgrades.</span></div>
     <div class="card"><strong>Bathroom Renovations</strong><span>Showers, tubs, vanities, tile, flooring, fixtures, and finish work.</span></div>
+    <div class="card"><strong>Outdoor Living</strong><span>Patio covers, outdoor kitchens, pergolas, backyard upgrades, and exterior living spaces.</span></div>
     <div class="card"><strong>Flooring Installation</strong><span>Luxury vinyl, laminate, tile, baseboards, trim, and repairs.</span></div>
     <div class="card"><strong>Painting & Drywall</strong><span>Interior paint, exterior paint, drywall repairs, texture, and touch-ups.</span></div>
     <div class="card"><strong>Commercial Repairs</strong><span>Offices, warehouses, tenant improvements, maintenance, and make-ready work.</span></div>
-    <div class="card"><strong>Property Maintenance</strong><span>Reliable repair and maintenance solutions for homes and commercial properties.</span></div>
-    <div class="card"><strong>Trim & Finish Work</strong><span>Baseboards, doors, hardware, fixtures, and interior detail upgrades.</span></div>
     <div class="card"><strong>Make-Ready Services</strong><span>Preparing residential and commercial spaces for sale, lease, or occupancy.</span></div>
   </div>
 </section>
 
 <section id="process">
   <h2>Our Simple Process</h2>
-  <div class="grid process">
-    <div class="process-card"><strong>1. Consultation</strong><p>We review your project needs, goals, timeline, and service area.</p></div>
-    <div class="process-card"><strong>2. Estimate</strong><p>We provide a clear scope of work with practical pricing and options when needed.</p></div>
-    <div class="process-card"><strong>3. Build & Repair</strong><p>Our team completes the work with attention to detail, cleanliness, and professionalism.</p></div>
+  <div class="grid">
+    <div class="process-card"><strong>1. Consultation</strong><p>We review your project needs, goals, timeline, budget, and service area.</p></div>
+    <div class="process-card"><strong>2. Design & Estimate</strong><p>When needed, we help create a design direction and provide a clear scope of work.</p></div>
+    <div class="process-card"><strong>3. Build & Renovate</strong><p>Our team completes the work with attention to detail, cleanliness, and professionalism.</p></div>
     <div class="process-card"><strong>4. Final Walkthrough</strong><p>We review the completed work with you to make sure the project is finished properly.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Project Gallery</h2>
+
+  <div class="featured-image">
+    <img src="Adding-Drama-to-Contemporary-Homes.webp" alt="Featured interior remodel">
+  </div>
+
+  <div class="grid gallery">
+    <img src="Kitchen-2.JPG" alt="Kitchen design rendering">
+    <img src="Patio-4TR.JPG" alt="Outdoor living design">
+    <img src="bruja kitchen 2.webp" alt="Kitchen remodel">
+    <img src="bruja restroom.webp" alt="Bathroom remodel">
+    <img src="bruja shower.webp" alt="Shower remodel">
+    <img src="bruja staircase.webp" alt="Staircase remodel">
   </div>
 </section>
 
@@ -467,36 +537,11 @@
   <h2>Why Choose All-Pro Renovations?</h2>
   <div class="checklist">
     <div class="check">✓ Over 15 Years of Experience</div>
+    <div class="check">✓ In-House Design Support</div>
     <div class="check">✓ Residential & Commercial Expertise</div>
     <div class="check">✓ Professional, Reliable Service</div>
-    <div class="check">✓ Quality Materials & Workmanship</div>
     <div class="check">✓ Honest Pricing & Clear Communication</div>
     <div class="check">✓ Long-Term Customer Relationships</div>
-  </div>
-</section>
-
-<section class="highlight">
-  <h2>Built on Experience, Integrity & Craftsmanship</h2>
-  <p class="intro">
-    Whether it is a home renovation, commercial repair, office make-ready,
-    warehouse improvement, or ongoing maintenance need, All-Pro Renovations
-    is committed to getting the job done right.
-  </p>
-</section>
-
-<section id="gallery">
-  <h2>Project Gallery</h2>
-
-  <div class="featured-image">
-    <img src="Adding-Drama-to-Contemporary-Homes.webp" alt="Featured Interior Remodel">
-  </div>
-
-  <div class="grid gallery">
-    <img src="bruja kitchen 2.webp" alt="Kitchen Remodel">
-    <img src="bruja living room.webp" alt="Living Room Remodel">
-    <img src="bruja restroom.webp" alt="Bathroom Remodel">
-    <img src="bruja shower.webp" alt="Shower Remodel">
-    <img src="bruja staircase.webp" alt="Staircase Remodel">
   </div>
 </section>
 
@@ -514,18 +559,11 @@
   </div>
 </section>
 
-<section>
-  <h2>Customer Testimonials</h2>
-  <div class="testimonial">
-    “Customer testimonials coming soon. We look forward to showcasing feedback from our residential and commercial clients.”
-  </div>
-</section>
-
 <section class="cta">
   <h2>Ready to Start Your Project?</h2>
   <p class="intro">
     Contact All-Pro Renovations today to discuss your residential or commercial renovation,
-    repair, or maintenance needs.
+    repair, maintenance, or design-build project.
   </p>
   <a class="btn" href="tel:7133800745">Call Now</a>
   <a class="btn gold" href="mailto:All.Pro.RenovationsHTX@gmail.com">Request an Estimate</a>
@@ -542,7 +580,7 @@
   <div class="footer-grid">
     <div>
       <h3>All-Pro Renovations</h3>
-      <p>Residential and commercial remodeling, renovations, repairs, maintenance, and make-ready services.</p>
+      <p>Design-build remodeling, renovations, repairs, maintenance, and make-ready services.</p>
     </div>
 
     <div>
@@ -565,4 +603,3 @@
 </body>
 </html>
 ```
-    
