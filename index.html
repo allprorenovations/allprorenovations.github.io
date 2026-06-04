@@ -1,6 +1,4 @@
-
-```html
-<!-- Full updated All-Pro Renovations homepage code with Design-Build section -->
+<!-- Full updated All-Pro Renovations homepage code with Facebook icon added -->
 <!-- Use this to replace everything inside index.html -->
 
 <!DOCTYPE html>
@@ -11,6 +9,8 @@
 
   <title>All-Pro Renovations | Design-Build Remodeling in Houston & DFW</title>
   <meta name="description" content="All-Pro Renovations provides design-build remodeling, renovations, commercial repairs, painting, flooring, drywall, maintenance, and make-ready services in The Woodlands, Houston, Frisco, Plano, and surrounding Texas areas.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
@@ -362,6 +362,30 @@
       font-weight: bold;
     }
 
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 22px;
+      margin-right: 10px;
+      transition: 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--gold);
+      color: var(--black);
+      transform: scale(1.12);
+    }
+
     .copyright {
       text-align: center;
       margin-top: 25px;
@@ -574,6 +598,7 @@
   <h2>Contact All-Pro Renovations</h2>
   <p><strong>Phone:</strong> <a href="tel:7133800745">713-380-0745</a></p>
   <p><strong>Email:</strong> <a href="mailto:AllProRenovationstx@outlook.com">AllProRenovationstx@outlook.com</a></p>
+  <p><strong>Facebook:</strong> <a href="https://www.facebook.com/AllProRenovationsTX" target="_blank">All-Pro Renovations TX</a></p>
   <p><strong>Serving:</strong> The Woodlands, Greater Houston, Frisco, Plano, and surrounding Texas communities.</p>
 </section>
 
@@ -582,12 +607,19 @@
     <div>
       <h3>All-Pro Renovations</h3>
       <p>Design-build remodeling, renovations, repairs, maintenance, and make-ready services.</p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/AllProRenovationsTX" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
     </div>
 
     <div>
       <h3>Contact</h3>
       <p><a href="tel:7133800745">713-380-0745</a></p>
       <p><a href="mailto:AllProRenovationstx@outlook.com">AllProRenovationstx@outlook.com</a></p>
+      <p><a href="https://www.facebook.com/AllProRenovationsTX" target="_blank">Facebook</a></p>
     </div>
 
     <div>
@@ -603,4 +635,3 @@
 
 </body>
 </html>
-```
