@@ -15,6 +15,7 @@
       --gold: #c8a24a;
       --blue: #00aeef;
       --white: #ffffff;
+      --soft: #fffaf0;
     }
 
     * { box-sizing: border-box; }
@@ -60,12 +61,10 @@
       font-size: 15px;
     }
 
-    nav a:hover {
-      color: var(--blue);
-    }
+    nav a:hover { color: var(--blue); }
 
     header {
-      min-height: 760px;
+      min-height: 780px;
       background:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.72)),
         url("Adding-Drama-to-Contemporary-Homes.webp");
@@ -79,9 +78,7 @@
       padding: 50px 20px;
     }
 
-    .hero-content {
-      max-width: 950px;
-    }
+    .hero-content { max-width: 980px; }
 
     header img {
       max-width: 430px;
@@ -102,7 +99,7 @@
     }
 
     header h2 {
-      font-size: 29px;
+      font-size: 30px;
       color: var(--gold);
       margin: 12px 0 22px;
       border: none;
@@ -111,7 +108,7 @@
 
     header p {
       font-size: 21px;
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto 30px;
     }
 
@@ -135,7 +132,7 @@
       max-width: 1180px;
       margin: 35px auto;
       padding: 55px 28px;
-      background: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.84);
       border-radius: 14px;
       box-shadow: 0 8px 25px rgba(0,0,0,.08);
     }
@@ -147,9 +144,9 @@
       padding-bottom: 10px;
     }
 
-    .intro {
-      font-size: 19px;
-    }
+    h3 { margin-top: 0; }
+
+    .intro { font-size: 19px; }
 
     .grid {
       display: grid;
@@ -177,6 +174,46 @@
       color: var(--blue);
       display: block;
       font-size: 15px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 26px;
+    }
+
+    .split-box {
+      background: var(--black);
+      color: var(--white);
+      padding: 34px;
+      border-radius: 14px;
+      border-bottom: 6px solid var(--blue);
+    }
+
+    .split-box h3 {
+      color: var(--gold);
+      font-size: 26px;
+    }
+
+    .split-box ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .process {
+      counter-reset: step;
+    }
+
+    .process-card {
+      background: var(--soft);
+      border-radius: 12px;
+      padding: 26px;
+      border-left: 6px solid var(--gold);
+    }
+
+    .process-card strong {
+      color: var(--black);
+      font-size: 19px;
     }
 
     .checklist {
@@ -250,6 +287,21 @@
       margin-top: 0;
     }
 
+    .cta {
+      background:
+        linear-gradient(rgba(0,0,0,.84), rgba(0,0,0,.84)),
+        url("bruja living room.webp");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: var(--gold);
+      border-bottom: 4px solid var(--blue);
+    }
+
     .contact {
       text-align: center;
       font-size: 20px;
@@ -264,40 +316,52 @@
     footer {
       background: var(--black);
       color: var(--white);
-      text-align: center;
-      padding: 25px;
       border-top: 5px solid var(--gold);
+      padding: 35px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    footer h3 {
+      color: var(--gold);
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.18);
     }
 
     @media (max-width: 800px) {
-      .nav-wrap {
-        flex-direction: column;
-      }
+      .nav-wrap { flex-direction: column; }
 
       nav a {
         display: inline-block;
         margin: 6px 8px;
       }
 
-      header {
-        min-height: 650px;
-      }
+      header { min-height: 650px; }
 
-      header img {
-        max-width: 330px;
-      }
+      header img { max-width: 330px; }
 
-      header h1 {
-        font-size: 40px;
-      }
+      header h1 { font-size: 40px; }
 
-      header h2 {
-        font-size: 22px;
-      }
+      header h2 { font-size: 22px; }
 
-      header p {
-        font-size: 18px;
-      }
+      header p { font-size: 18px; }
     }
   </style>
 </head>
@@ -309,6 +373,7 @@
     <div class="nav-logo">All-Pro Renovations</div>
     <div>
       <a href="#services">Services</a>
+      <a href="#process">Process</a>
       <a href="#why">Why Choose Us</a>
       <a href="#gallery">Gallery</a>
       <a href="#areas">Service Areas</a>
@@ -341,6 +406,39 @@
   </p>
 </section>
 
+<section>
+  <h2>Residential & Commercial Services</h2>
+  <div class="split">
+    <div class="split-box">
+      <h3>Residential Remodeling</h3>
+      <p>
+        From small repairs to full home updates, we help homeowners improve comfort,
+        function, and appearance with quality work and clear communication.
+      </p>
+      <ul>
+        <li>Kitchen and bathroom renovations</li>
+        <li>Flooring, paint, drywall, and trim</li>
+        <li>Interior and exterior improvements</li>
+        <li>Home repair and make-ready services</li>
+      </ul>
+    </div>
+
+    <div class="split-box">
+      <h3>Commercial Repairs</h3>
+      <p>
+        We provide reliable repair, renovation, and maintenance support for commercial
+        spaces, offices, warehouses, and property managers.
+      </p>
+      <ul>
+        <li>Office and warehouse improvements</li>
+        <li>Tenant make-ready services</li>
+        <li>Commercial painting and repairs</li>
+        <li>Facility maintenance solutions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section id="services">
   <h2>Featured Services</h2>
   <div class="grid">
@@ -350,6 +448,18 @@
     <div class="card"><strong>Painting & Drywall</strong><span>Interior paint, exterior paint, drywall repairs, texture, and touch-ups.</span></div>
     <div class="card"><strong>Commercial Repairs</strong><span>Offices, warehouses, tenant improvements, maintenance, and make-ready work.</span></div>
     <div class="card"><strong>Property Maintenance</strong><span>Reliable repair and maintenance solutions for homes and commercial properties.</span></div>
+    <div class="card"><strong>Trim & Finish Work</strong><span>Baseboards, doors, hardware, fixtures, and interior detail upgrades.</span></div>
+    <div class="card"><strong>Make-Ready Services</strong><span>Preparing residential and commercial spaces for sale, lease, or occupancy.</span></div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>Our Simple Process</h2>
+  <div class="grid process">
+    <div class="process-card"><strong>1. Consultation</strong><p>We review your project needs, goals, timeline, and service area.</p></div>
+    <div class="process-card"><strong>2. Estimate</strong><p>We provide a clear scope of work with practical pricing and options when needed.</p></div>
+    <div class="process-card"><strong>3. Build & Repair</strong><p>Our team completes the work with attention to detail, cleanliness, and professionalism.</p></div>
+    <div class="process-card"><strong>4. Final Walkthrough</strong><p>We review the completed work with you to make sure the project is finished properly.</p></div>
   </div>
 </section>
 
@@ -411,6 +521,16 @@
   </div>
 </section>
 
+<section class="cta">
+  <h2>Ready to Start Your Project?</h2>
+  <p class="intro">
+    Contact All-Pro Renovations today to discuss your residential or commercial renovation,
+    repair, or maintenance needs.
+  </p>
+  <a class="btn" href="tel:7133800745">Call Now</a>
+  <a class="btn gold" href="mailto:All.Pro.RenovationsHTX@gmail.com">Request an Estimate</a>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contact All-Pro Renovations</h2>
   <p><strong>Phone:</strong> <a href="tel:7133800745">713-380-0745</a></p>
@@ -419,9 +539,30 @@
 </section>
 
 <footer>
-  <p>© 2026 All-Pro Renovations. All rights reserved.</p>
+  <div class="footer-grid">
+    <div>
+      <h3>All-Pro Renovations</h3>
+      <p>Residential and commercial remodeling, renovations, repairs, maintenance, and make-ready services.</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:7133800745">713-380-0745</a></p>
+      <p><a href="mailto:All.Pro.RenovationsHTX@gmail.com">All.Pro.RenovationsHTX@gmail.com</a></p>
+    </div>
+
+    <div>
+      <h3>Service Areas</h3>
+      <p>The Woodlands • Houston • Spring • Conroe • Frisco • Plano • McKinney • Prosper</p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 All-Pro Renovations. All rights reserved.</p>
+  </div>
 </footer>
 
 </body>
 </html>
 ```
+    
